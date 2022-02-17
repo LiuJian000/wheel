@@ -9,10 +9,6 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-/**
- * @author: guangxush
- * @create: 2020/02/12
- */
 public class TimeServer {
     public void bind(int port) throws Exception {
         //配置服务端的NIO线程组, 创建两个NioEventLoopGroup，专门用于处理网络事件

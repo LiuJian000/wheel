@@ -29,6 +29,10 @@
         <module>JVM</module>
         <module>Template</module>
         <module>Factory</module>
+        <module>Feature</module>
+        <module>Jwt</module>
+        <module>StringTest</module>
+        <module>Flink</module>
     </modules>
 
 

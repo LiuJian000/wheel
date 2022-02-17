@@ -2,10 +2,6 @@ package codec.baseline;
 
 import java.io.Serializable;
 
-/**
- * @author: guangxush
- * @create: 2020/02/14
- */
 public class SubscribeResp implements Serializable {
 
     /**
