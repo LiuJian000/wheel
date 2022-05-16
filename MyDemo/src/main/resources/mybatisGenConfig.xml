@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <!-- 引入配置文件 -->
+
+    <!-- 指定数据连接驱动jar地址 -->
+    <classPathEntry location="/Users/liujian/.m2/repository/mysql/mysql-connector-java/8.0.25/mysql-connector-java-8.0.25.jar" />
+
+    <!-- 一个数据库一个context -->
+    <context id="sportsmeeting">
+        <!-- 注释 -->
+        <commentGenerator >
+            <property name="suppressAllComments" value="true"/><!-- 是否取消注释 -->
+            <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳-->
+        </commentGenerator>
+
+        <!-- jdbc连接 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://101.201.152.89:3306/sportsmeeting" userId="root"
+                        password="ShiJie123!" />
+
+        <!-- 类型转换 -->
+        <javaTypeResolver>
+            <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 生成实体类的包名和位置 注意targetProject的值为实体类放在工程中具体位置的相对路径，-->
+        <javaModelGenerator targetPackage="com.liu.entity"
+                            targetProject="src/main/java" >
+            <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 是否针对string类型的字段在set的时候进行trim调用 -->
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 生成的SQLMapper映射文件包名和位置 -->
+        <sqlMapGenerator targetPackage="mybatis"
+                         targetProject="src/main/resources" >
+            <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- 生成DAO的包名和位置，这里配置将生成的dao类放在me.gacl.dao这个包下 -->
+        <javaClientGenerator targetPackage="com.liu.dao"
+                             targetProject="src/main/java" type="XMLMAPPER" >
+            <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 配置表信息 -->
+        <!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample
+                是否生成 example类   -->
+        <!-- 更改tableName和domainObjectName就可以 -->
+        <table schema="sportsmeeting" tableName="news"
+               domainObjectName="News" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="sportsmeeting" tableName="competitions"
+               domainObjectName="Competitions" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="sportsmeeting" tableName="role_permission"
+               domainObjectName="RolePermission" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="sportsmeeting" tableName="permission"
+               domainObjectName="Permission" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="sportsmeeting" tableName="role"
+               domainObjectName="Role" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="sportsmeeting" tableName="user"
+               domainObjectName="User" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="sportsmeeting" tableName="session"
+               domainObjectName="Session" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+        <table schema="sportsmeeting" tableName="user_role"
+               domainObjectName="UserRole" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+        </table>
+
+
+
+    </context>
+</generatorConfiguration>

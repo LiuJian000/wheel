@@ -11,5 +11,5 @@ import java.lang.annotation.*;
 @Target(ElementType.FIELD)
 @Inherited
 @Documented
-public @interface Autowired {
+public @interface AutowiredBean {
 }

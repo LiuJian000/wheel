@@ -33,6 +33,9 @@
         <module>Jwt</module>
         <module>StringTest</module>
         <module>Flink</module>
+        <module>Algorighms</module>
+        <module>MyDemo</module>
+        <module>OOP</module>
     </modules>
 
 

@@ -5,7 +5,7 @@ package demo2;
  * @create: 2020/09/26
  */
 public class UserController {
-    @Autowired
+    @AutowiredBean
     private UserService userService;
 
     public UserService getUserService() {

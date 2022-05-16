@@ -13,10 +13,11 @@ public class TestAutowired {
 
         // 获取clazz对象
         Class<? extends UserController> clazz = userController.getClass();
+
         Stream.of(clazz.getDeclaredFields()).forEach(
                 field -> {
                     // 判断属性是否有注解
-                    Autowired annotation = field.getAnnotation(Autowired.class);
+                    AutowiredBean annotation = field.getAnnotation(AutowiredBean.class);
                     if(annotation != null){
                         field.setAccessible(true);
                         // 获取当前属性的类型，有了类型可以创建具体的对象

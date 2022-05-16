@@ -15,7 +15,7 @@ public class TestLatch {
         ExecutorService executor = Executors.newCachedThreadPool();
         CountDownLatch latch = new CountDownLatch(10);
         List<Gamer> gamers = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             Gamer gamer = new Gamer(latch, i + 1 + "");
             gamers.add(gamer);
         }

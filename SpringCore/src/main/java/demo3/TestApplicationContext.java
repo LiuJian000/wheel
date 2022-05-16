@@ -10,5 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestApplicationContext {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+    System.out.println(context.getApplicationName());
+    System.out.println(context.getParent());
+    System.out.println(context.getAutowireCapableBeanFactory());
     }
 }
